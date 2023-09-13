@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <head>
-  Kevin H's Website
+  <title>Kevin H's Website</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  
 </head>
 
 <body>
-  <p>Hello, world!</p>
+  <h1>Kevin's Food Chart</h1>
+  <input type="button" id="toggleButton" value="Hide High GI Foods" />
+  <div>
+    <table class="data" id="foods">
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Glycemic Index</th>
+          <th>Calories per serving</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="low_GI">
+          <td>Broccoli</td>
+          <td>15</td>
+          <td>50</td>
+        </tr>
+        <tr id="medium_GI">
+          <td>Hamburger</td>
+          <td>66</td>
+          <td>375</td>
+        </tr>
+        <tr id="high_GI">
+          <td>Mashed Potatoes</td>
+          <td>83</td>
+          <td>267</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 
 </html>
