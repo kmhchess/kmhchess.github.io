@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
   <title>Kevin H's Website</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8"/>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   
@@ -11,6 +13,12 @@
   <h2 id="feedback" style="position:relative;"></h2>
   <input type="button" id="toggleButton" value="Hide High GI Foods" />
   <div>
+    <div id="photos" style="height:600px;width:600px;">
+      <img id="broccoliImage" alt="broccoli" src="images/broccoli.jpg" />
+      <img id="hamburgerImage" alt="hamburger" src="images/hamburger.jpg" />
+      <img id="mashedPotatoesImage" alt="mashed-potatoes" src="images/mashed-potatoes.jpg" />
+    </div>
+
     <table class="data" id="foods">
       <thead>
         <tr>
@@ -24,16 +32,19 @@
           <td>Broccoli</td>
           <td>15</td>
           <td>50</td>
+          <td><input type="button" class=imageButton id="broccoliButton" value="Show Image" /></td>
         </tr>
         <tr id="medium_GI">
           <td>Hamburger</td>
           <td>66</td>
           <td>375</td>
+          <td><input type="button" class=imageButton id="hamburgerButton" value="Show Image" /></td>
         </tr>
         <tr id="high_GI">
           <td>Mashed Potatoes</td>
           <td>83</td>
           <td>267</td>
+          <td><input type="button" class=imageButton id="mashedPotatoesButton" value="Show Image" /></td>
         </tr>
       </tbody>
     </table>
