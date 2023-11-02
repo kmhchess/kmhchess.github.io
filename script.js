@@ -6,8 +6,8 @@ $(document).ready(function(){
     $('#mashedPotatoesImage').hide();
 
     $('#toggleButton').click(function(){
-        $('#high_GI').toggle();        
-        if($('#high_GI').is(':visible')) {
+        $('.high_GI').toggle();        
+        if($('.high_GI').is(':visible')) {
           $(this).val('Hide High GI Foods');
           $("#feedback").animate({right: '+=250px'}, 500, 'swing' );
           $("#feedback").text("Click the button if you choose.");
@@ -37,5 +37,27 @@ $(document).ready(function(){
         $('#hamburgerImage').fadeOut();
         $('#mashedPotatoesImage').fadeIn();
       }
+    });
+
+    $('#food_info_menu ul > li ul')
+    .click(function(event){
+      event.stopPropagation();
+    })
+    .filter(':not(:first)')
+    .hide();
+    
+  $('#food_info_menu ul > li').click(function(){
+    var selfClick = $(this).find('ul:first').is(':visible');
+    if(!selfClick) {
+      $(this)
+        .parent()
+        .find('> li ul:visible')
+        .slideToggle();
+    }
+    
+    $(this)
+      .find('ul:first')
+      .stop(true, true)
+      .slideToggle();
     });
   });

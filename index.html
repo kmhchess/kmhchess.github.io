@@ -2,13 +2,14 @@
 <head>
   <title>Kevin H's Website</title>
   <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8"/>
+  <link rel="stylesheet" href="accordion.css" type="text/css" media="screen" charset="utf-8"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   
 </head>
 
-<body>
+<body>   
   <h1>Kevin's Food Chart</h1>
   <h2 id="feedback" style="position:relative;"></h2>
   <input type="button" id="toggleButton" value="Hide High GI Foods" />
@@ -28,19 +29,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr id="low_GI">
+        <tr class="low_GI">
           <td>Broccoli</td>
           <td>15</td>
           <td>50</td>
           <td><input type="button" class=imageButton id="broccoliButton" value="Show Image" /></td>
         </tr>
-        <tr id="medium_GI">
+        <tr class="medium_GI">
           <td>Hamburger</td>
           <td>66</td>
           <td>375</td>
           <td><input type="button" class=imageButton id="hamburgerButton" value="Show Image" /></td>
         </tr>
-        <tr id="high_GI">
+        <tr class="high_GI">
           <td>Mashed Potatoes</td>
           <td>83</td>
           <td>267</td>
@@ -49,6 +50,38 @@
       </tbody>
     </table>
   </div>
+  <br>
+  <br>
+  <h1>Links to more information</h1>  
+  <div id="food_info_menu">
+    <ul id="accordion">
+      <li class="active">
+        Low Glycemic Index
+        <ul>
+          <li><a href="https://glycemic-index.net/broccoli/">Broccoli (links to external site)</a></li>
+          <li><a href="#">Another low GI food</a></li>
+          <li><a href="#">And another low GI food</a></li>
+        </ul>
+      </li>
+      <li>
+        Medium Glycemic Index
+        <ul>
+          <li><a href="#">Hamburger</a></li>
+          <li>Another medium GI food</li>
+          <li>And another medium GI food</li>
+        </ul>
+      </li>
+      <li>
+        High Glycemic Index
+        <ul>
+          <li>Mashed Potatoes</li>
+          <li>Another high GI food</li>
+          <li>And another high GI food</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <br>
 </body>
-
 </html>
